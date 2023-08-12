@@ -1,5 +1,6 @@
+using midterm_project.Repositories;
 using midterm_project.Migrations;
-// using midterm_project.Repositories;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddSqlite<PetDbContext>("Data Source=SqlDatabase.db");
+
+builder.Services.AddScoped<IPetRepository, EFPetRepository>();
 
 var app = builder.Build();
 
