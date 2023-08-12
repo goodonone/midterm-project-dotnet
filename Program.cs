@@ -1,7 +1,12 @@
+using midterm_project.Migrations;
+// using midterm_project.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSqlite<PetDbContext>("Data Source=SqlDatabase.db");
 
 var app = builder.Build();
 

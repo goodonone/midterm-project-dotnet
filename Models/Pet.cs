@@ -27,6 +27,6 @@ public class Pet
     public int PetAge { get; set; }
     [Display(Name = "All Administered Shots")]
 
-    public string? NecessaryShots { get; set; }
+    public string? ShotsAndVaccinations { get; set; }
 
 }
