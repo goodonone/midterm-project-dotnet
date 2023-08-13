@@ -1,0 +1,26 @@
+@model IEnumerable<midterm_project.Models.Pet>
+
+<div class="list-wrapper">
+    <h1 class="display-4 list-title">Welcome To Our Pet Store!</h1>
+
+    @foreach (var pet in Model ?? new List<Pet>())
+    {
+        <div class="job-summary row">
+            <p class="job-title col-10">@pet.PetSpeciesOrName, @pet.PhotoUrl</p>
+            <div class="col-12">   
+                <a class="btn btn-sm btn-secondary mb-3 ml-3 float-end"
+                    asp-controller="Job" asp-action="Delete" asp-route-id="@pet.PetId">
+                    Delete Pet
+                </a>
+                <a class="btn btn-sm btn-light mb-3 float-end"
+                    asp-controller="Job" asp-action="Detail" asp-route-id="@pet.PetId" >
+                    Edit Pet
+                </a>
+            </div>
+        </div>
+    }
+
+    <div>
+        <a class="btn btn-primary mt-3 float-end" asp-controller="PetShop" asp-action="Add">Create New Pet</a>
+    </div>
+</div>

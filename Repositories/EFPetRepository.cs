@@ -42,7 +42,7 @@ public class EFPetRepository : IPetRepository
         var originalPet = _context.Pet.Find(newPet.PetId);
         if (originalPet != null)
         {
-            originalPet.PetSpecies = newPet.PetSpecies;
+            originalPet.PetSpeciesOrName = newPet.PetSpeciesOrName;
             originalPet.PhotoUrl = newPet.PhotoUrl;
             originalPet.PetDescription = newPet.PetDescription;
             originalPet.Spayed = newPet.Spayed;
