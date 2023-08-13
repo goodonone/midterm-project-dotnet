@@ -9,6 +9,10 @@
             <p class="job-title col-10">@pet.PetSpecies, @pet.PhotoUrl</p>
             <div class="col-12">   
                 <a class="btn btn-sm btn-secondary mb-3 ml-3 float-end"
+                    asp-controller="Job" asp-action="Detail" asp-route-id="@pet.PetId">
+                    Details
+                </a>
+                <a class="btn btn-sm btn-secondary mb-3 ml-3 float-end"
                     asp-controller="Job" asp-action="Delete" asp-route-id="@pet.PetId">
                     Delete Pet
                 </a>
