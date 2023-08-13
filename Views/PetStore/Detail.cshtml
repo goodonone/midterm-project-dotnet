@@ -6,19 +6,18 @@
 
 <div class="resume-wrapper">
     <h1 class="display-4 mb-5">@Model?.PetSpecies</h1>
-    <a>@Model?.PhotoUrl</a>
+    <img src = "@Model?.PhotoUrl">
     <p>@Model?.PetDescription<br>
         Age: @Model?.PetAge<br>
         Has the Animal Been Spayed/Neutered?: @Model?.Spayed<br>
         Shots & Vaccinations Adinistered: @Model?.ShotsAndVaccinations</p>
-
 
     @* @await Html.PartialAsync("_JobInput", Model) *@
 
     <input type="hidden" asp-for="PetId" />
     <div class="submit-wrapper">
         <input type="submit" class="btn btn-primary float-end" value="Save">
-        <a class="btn btn-light" asp-controller="PetStore" asp-action="List">Back</a>
+        <a class="btn btn-light" asp-controller="Home" asp-action="Index">Back</a>
     </div>
 
 </div>

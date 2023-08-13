@@ -24062,13 +24062,18 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/judeprashanth/Desktop/backend-dotnet/midterm-project/midterm-project/Views/PetStore/List.cshtml",
-      "TargetPath": "Views\\PetStore\\List.cshtml",
+      "FilePath": "/Users/judeprashanth/Desktop/backend-dotnet/midterm-project/midterm-project/Views/PetStore/Detail.cshtml",
+      "TargetPath": "Views\\PetStore\\Detail.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/judeprashanth/Desktop/backend-dotnet/midterm-project/midterm-project/Views/PetStore/Detail.cshtml",
-      "TargetPath": "Views\\PetStore\\Detail.cshtml",
+      "FilePath": "/Users/judeprashanth/Desktop/backend-dotnet/midterm-project/midterm-project/Views/PetStore/Create.cshtml",
+      "TargetPath": "Views\\PetStore\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/judeprashanth/Desktop/backend-dotnet/midterm-project/midterm-project/Views/PetStore/List.cshtml",
+      "TargetPath": "Views\\PetStore\\List.cshtml",
       "FileKind": "mvc"
     }
   ]

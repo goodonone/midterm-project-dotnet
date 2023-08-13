@@ -19,7 +19,7 @@ public class PetStoreController : Controller
         return View(_petRepository.GetAllPets());
     }
 
-    public IActionResult Edit(int id)
+    public IActionResult Detail(int id)
     {
         var pet = _petRepository.GetPetById(id);
         if (pet == null)
@@ -42,14 +42,14 @@ public class PetStoreController : Controller
     }
 
     [HttpGet]
-    public IActionResult CreatePet()
+    public IActionResult Create()
     {
 
         return View();
     }
 
     [HttpPost]
-    public IActionResult CreatePet(Pet pet)
+    public IActionResult Create(Pet pet)
     {
         if (!ModelState.IsValid)
         {

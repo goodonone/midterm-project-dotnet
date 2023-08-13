@@ -6,18 +6,19 @@
     @foreach (var pet in Model ?? new List<Pet>())
     {
         <div class="job-summary row">
-            <p class="job-title col-10">@pet.PetSpecies, @pet.PhotoUrl</p>
+            <img src="@pet.PhotoUrl">
+            <p class="job-title col-10">@pet.PetSpecies</p>
             <div class="col-12">   
                 <a class="btn btn-sm btn-secondary mb-3 ml-3 float-end"
-                    asp-controller="Job" asp-action="Detail" asp-route-id="@pet.PetId">
+                    asp-controller="PetStore" asp-action="Detail" asp-route-id="@pet.PetId">
                     Details
                 </a>
                 <a class="btn btn-sm btn-secondary mb-3 ml-3 float-end"
-                    asp-controller="Job" asp-action="Delete" asp-route-id="@pet.PetId">
+                    asp-controller="PetStore" asp-action="Delete" asp-route-id="@pet.PetId">
                     Delete Pet
                 </a>
                 <a class="btn btn-sm btn-light mb-3 float-end"
-                    asp-controller="Job" asp-action="Detail" asp-route-id="@pet.PetId" >
+                    asp-controller="PetStore" asp-action="Edit" asp-route-id="@pet.PetId" >
                     Edit Pet
                 </a>
             </div>
@@ -25,6 +26,6 @@
     }
 
     <div>
-        <a class="btn btn-primary mt-3 float-end" asp-controller="PetStore" asp-action="Add">Create New Pet</a>
+        <a class="btn btn-primary mt-3 float-end" asp-controller="PetStore" asp-action="Create">Create New Pet</a>
     </div>
 </div>
