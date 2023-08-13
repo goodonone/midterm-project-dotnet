@@ -18,7 +18,7 @@ public class Pet
 
     public string? PetDescription { get; set; }
     [Required]
-    [Display(Name = "Spayed?")]
+    [Display(Name = "Spaying")]
 
     public Boolean? Spayed { get; set; }
     [Required, Range(0, 100)]

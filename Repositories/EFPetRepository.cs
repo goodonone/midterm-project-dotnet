@@ -15,26 +15,43 @@ public class EFPetRepository : IPetRepository
 
     public Pet CreatePet(Pet newPet)
     {
-        throw new NotImplementedException();
+        _context.Pet.Add(newPet);
+        _context.SaveChanges();
+        return newPet;
     }
 
     public void DeletePetById(int petId)
-    {
-        throw new NotImplementedException();
+{
+    var pet = _context.Pet.Find(petId); 
+    if (pet != null) {
+        _context.Pet.Remove(pet); 
+        _context.SaveChanges(); 
     }
+}
 
     public IEnumerable<Pet> GetAllPets()
     {
-        throw new NotImplementedException();
+        return _context.Pet.ToList();
     }
 
     public Pet GetPetById(int petId)
     {
-        throw new NotImplementedException();
+        return _context.Pet.SingleOrDefault(c => c.PetId == petId);
     }
 
     public Pet UpdatePet(Pet newPet)
     {
-        throw new NotImplementedException();
+        var originalPet = _context.Pet.Find(newPet.PetId);
+        if (originalPet != null)
+        {
+            originalPet.PetSpecies = newPet.PetSpecies;
+            originalPet.PhotoUrl = newPet.PhotoUrl;
+            originalPet.PetDescription = newPet.PetDescription;
+            originalPet.Spayed = newPet.Spayed;
+            originalPet.PetAge = newPet.PetAge;
+            originalPet.ShotsAndVaccinations = newPet.ShotsAndVaccinations;
+            _context.SaveChanges();
+        }
+        return originalPet;
     }
 }
