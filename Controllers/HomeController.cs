@@ -1,24 +1,22 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using midterm_project.Models;
-using midterm_project.Repositories;
+
 
 namespace midterm_project.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-    private readonly IPetRepository _petRepository;
     
 
-    public HomeController(ILogger<HomeController> logger, IPetRepository repository)
+    public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
-        _petRepository = repository;
     }
     public IActionResult Index()
     {
-        return View(_petRepository.GetAllPets());
+        return RedirectToAction("List", "PetStore");
     }
 
     public IActionResult Privacy()
