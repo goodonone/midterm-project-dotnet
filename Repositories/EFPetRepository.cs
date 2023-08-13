@@ -1,7 +1,5 @@
 using midterm_project.Migrations;
 using midterm_project.Models;
-using midterm_project.Repositories;
-
 namespace midterm_project.Repositories;
 
 public class EFPetRepository : IPetRepository
