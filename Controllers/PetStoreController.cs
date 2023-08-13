@@ -14,13 +14,7 @@ public class PetStoreController : Controller
         _petRepository = repository;
     }
 
-    public IActionResult Index()
-    {
-            return View();
-    }
-
-
-public IActionResult List()
+    public IActionResult List()
     {
         return View(_petRepository.GetAllPets());
     }
@@ -78,4 +72,3 @@ public IActionResult List()
 }
 
 
-    

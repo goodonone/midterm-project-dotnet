@@ -17,7 +17,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
     modelBuilder.Entity<Pet>(entity =>
     {
         entity.HasKey(e => e.PetId);
-        entity.Property(e => e.PetSpecies).IsRequired();
+        entity.Property(e => e.PetSpeciesOrName).IsRequired();
         entity.Property(e => e.PhotoUrl).IsRequired();
         entity.Property(e => e.PetDescription).IsRequired();
         entity.Property(e => e.Spayed).IsRequired();
