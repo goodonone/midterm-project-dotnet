@@ -8,7 +8,7 @@ public class Pet
     [Required]
     [Display(Name = "Pet Species")]
 
-    public string? PetSpeciesOrName { get; set; }
+    public string? PetSpecies { get; set; }
     [Required]
     [Display(Name = "Photo")]
 

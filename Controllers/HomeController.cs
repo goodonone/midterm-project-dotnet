@@ -16,7 +16,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return RedirectToAction("List", "PetStore");
+        return View("~/Views/PetStore/List.cshtml");
     }
 
     public IActionResult Privacy()
