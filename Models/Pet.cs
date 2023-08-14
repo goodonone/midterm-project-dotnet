@@ -10,7 +10,7 @@ public class Pet
 
     public string? PetSpecies { get; set; }
     [Required]
-    [Display(Name = "Photo")]
+    [Display(Name = "PhotoURL")]
 
     public string? PhotoUrl { get; set; }
     [Required]
@@ -18,10 +18,10 @@ public class Pet
 
     public string? PetDescription { get; set; }
     [Required]
-    [Display(Name = "Spaying")]
+    [Display(Name = "Spayed/Neutered?")]
 
     public Boolean? Spayed { get; set; }
-    [Required, Range(0, 100)]
+    [Required]
     [Display(Name = "Pet Age")]
 
     public int PetAge { get; set; }

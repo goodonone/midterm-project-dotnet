@@ -29,6 +29,17 @@ public class PetStoreController : Controller
         return View(pet);
     }
 
+    public IActionResult Update(int id) 
+    {
+        var pet = _petRepository.GetPetById(id);
+
+        if (pet == null) {
+            return RedirectToAction("List");
+        }
+
+        return View(pet);
+    }
+
     [HttpPost]
     public IActionResult Update(Pet pet)
     {
@@ -61,7 +72,7 @@ public class PetStoreController : Controller
     }
 
 
-    public IActionResult DeletePetById(int id)
+    public IActionResult Delete(int id)
     {
         _petRepository.DeletePetById(id);
 

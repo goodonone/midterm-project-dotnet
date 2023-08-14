@@ -35,9 +35,13 @@
 
             <div class="row mb-4">
                 <label class="control-label col-md-4" asp-for="Spayed"></label>
-                <input class="form-control col-md-8" asp-for="Spayed" />
+               <select class="form-control custom-select-md mb-3" asp-for="Spayed">
+                    <option selected>Choose...</option>
+                    <option value="True">Yes</option>
+                    <option value="False">No</option>
+                </select>
                 <div class="col-10 offset-md-1 text-danger text-right">
-                    <span asp-validation-for="Spayed"></span>=
+                    <span asp-validation-for="Spayed"></span>
                 </div>
             </div>
 
@@ -50,10 +54,11 @@
             </div>
         </div>
 
-        <input type="hidden" asp-for="PetId" />
+        <input type="hidden" asp-for="PetId"/>
         <div class="submit-wrapper">
             <input type="submit" class="btn btn-primary float-end" value="Save">
             <a class="btn btn-light" asp-controller="PetStore" asp-action="List">Back</a>
+            <a class="btn btn-light" asp-controller="PetStore" asp-action="Delete" >Delete Pet</a>
         </div>
     </form>
 </div>

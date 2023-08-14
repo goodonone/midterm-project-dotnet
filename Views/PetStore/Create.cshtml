@@ -9,46 +9,50 @@
         <h1 class="display-4 text-center mb-5">Add New Pet</h1>
 
         <div class="form-group">
-    <div class="row mb-4">
-        <label class="control-label col-md-4" asp-for="PetSpecies"></label>
-        <input class="form-control col-md-8" asp-for="PetSpecies" />
-        <div class="col-10 offset-md-1 text-danger text-right">
-            <span asp-validation-for="PetSpecies"></span>
+            <div class="row mb-4">
+                <label class="control-label col-md-4" asp-for="PetSpecies"></label>
+                <input class="form-control col-md-8" asp-for="PetSpecies" />
+                <div class="col-10 offset-md-1 text-danger text-right">
+                    <span asp-validation-for="PetSpecies"></span>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <label class="control-label col-md-4" asp-for="PhotoUrl"></label>
+                <input class="form-control col-md-8" asp-for="PhotoUrl" />
+                <div class="col-10 offset-md-1 text-danger text-right">
+                    <span asp-validation-for="PhotoUrl"></span>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <label class="control-label col-md-4" asp-for="PetDescription"></label>
+                <textarea class="form-control col-md-8" asp-for="PetDescription"></textarea>
+                <div class="col-10 offset-md-1 text-danger text-right">
+                    <span asp-validation-for="PetDescription"></span>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <label class="control-label col-md-4" asp-for="Spayed"></label>
+                <select class="form-control custom-select-md mb-3" asp-for="Spayed">
+                    <option selected>Choose...</option>
+                    <option value="True">Yes</option>
+                    <option value="False">No</option>
+                </select>
+                <div class="col-10 offset-md-1 text-danger text-right">
+                    <span asp-validation-for="Spayed"></span>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <label class="control-label col-md-4" asp-for="ShotsAndVaccinations"></label>
+                <textarea class="form-control col-md-8" asp-for="ShotsAndVaccinations"></textarea>
+                <div class="col-10 offset-md-1 text-danger text-right">
+                    <span asp-validation-for="ShotsAndVaccinations"></span>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="row mb-4">
-        <label class="control-label col-md-4" asp-for="PhotoUrl"></label>
-        <input class="form-control col-md-8" asp-for="PhotoUrl" />
-        <div class="col-10 offset-md-1 text-danger text-right">
-            <span asp-validation-for="PhotoUrl"></span>
-        </div>
-    </div>
-
-    <div class="row mb-4">         
-        <label class="control-label col-md-4" asp-for="PetDescription"></label>
-        <textarea class="form-control col-md-8" asp-for="PetDescription"></textarea>
-        <div class="col-10 offset-md-1 text-danger text-right">
-            <span asp-validation-for="PetDescription"></span>
-        </div>   
-    </div>
-
-    <div class="row mb-4">       
-        <label class="control-label col-md-4" asp-for="Spayed"></label>
-        <input class="form-control col-md-8" asp-for="Spayed" />
-        <div class="col-10 offset-md-1 text-danger text-right">
-            <span asp-validation-for="Spayed"></span>=
-        </div>     
-    </div>
-
- <div class="row mb-4">         
-        <label class="control-label col-md-4" asp-for="ShotsAndVaccinations"></label>
-        <textarea class="form-control col-md-8" asp-for="ShotsAndVaccinations"></textarea>
-        <div class="col-10 offset-md-1 text-danger text-right">
-            <span asp-validation-for="ShotsAndVaccinations"></span>
-        </div>   
-    </div>
-</div>
         @* @await Html.PartialAsync("_JobInput", Model) *@
 
         <input type="submit" class="btn btn-sm btn-primary float-end" value="Save">

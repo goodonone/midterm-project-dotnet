@@ -6,11 +6,13 @@
 
 <div class="resume-wrapper">
     <h1 class="display-4 mb-5">@Model?.PetSpecies</h1>
-    <img src = "@Model?.PhotoUrl">
+    <img src="@Model?.PhotoUrl">
     <p>@Model?.PetDescription<br>
-        Age: @Model?.PetAge<br>
-        Has the Animal Been Spayed/Neutered?: @Model?.Spayed<br>
-        Shots & Vaccinations Adinistered: @Model?.ShotsAndVaccinations</p>
+        <b>Age:</b> @Model?.PetAge<br>
+        <b>Has the Animal Been Spayed/Neutered?:</b> @Model?.Spayed
+        <br>
+        <b>Shots & Vaccinations Administered:</b> @Model?.ShotsAndVaccinations
+    </p>
 
     <input type="hidden" asp-for="PetId" />
     <div class="submit-wrapper">
