@@ -1,9 +1,12 @@
 @model IEnumerable<midterm_project.Models.Pet>
 
-<div class="list-wrapper">
+<div class="list-title">
     <h1 class="display-4 list-title">Welcome To Our Pet Store!</h1>
+        <a class="btn btn-primary mt-3 float-end" asp-controller="PetStore" asp-action="Create">Create New Pet</a>
+</div>
 
-<div class="container-fluid list-container">
+<div class="list-container">
+<div class="container-fluid">
     <div class="row list">
     @foreach (var pet in Model ?? new List<Pet>())
     {
@@ -28,7 +31,5 @@
     </div>
 </div>
 
-    <div>
-        <a class="btn btn-primary mt-3 float-end" asp-controller="PetStore" asp-action="Create">Create New Pet</a>
-    </div>
+    
 </div>

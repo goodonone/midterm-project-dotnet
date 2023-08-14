@@ -27,13 +27,20 @@ body {
 
 /* My Custom Styling */
 
-.list-container{
-  margin-top: -100px;
+.list-title {
+  display: inline;
+  margin-bottom: 30px;
 }
 
-.list {
-  display: flex;
+.list-container {
+  margin-top: 50px;
+  /* margin-bottom: 60px; */
+  /* margin: auto; */
 }
+
+/* .list {
+  display: flex;
+} */
 
 .list-contents {
   display: flex;
@@ -43,19 +50,20 @@ body {
   cursor: pointer;
   width: 260px;
   height: 360px;
-  margin-top: 120px;
+  margin-bottom: 120px;
 }
 
-.list-image{
+.list-image {
   margin-bottom: 20px;
   width: 260px;
   height: 360px;
 }
 
-footer{
+footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 30px; 
-  margin-top: 50px;
+  height: 30px;
+  margin-top: -200px;
 }
+
