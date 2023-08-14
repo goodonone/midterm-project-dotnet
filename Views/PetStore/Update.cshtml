@@ -58,7 +58,7 @@
         <div class="submit-wrapper">
             <input type="submit" class="btn btn-primary float-end" value="Save">
             <a class="btn btn-light" asp-controller="PetStore" asp-action="List">Back</a>
-            <a class="btn btn-light" asp-controller="PetStore" asp-action="Delete" >Delete Pet</a>
+            <a class="btn btn-light" asp-controller="PetStore" asp-action="Delete" asp-route-id="@Model?.PetId">Delete Pet</a>
         </div>
     </form>
 </div>
