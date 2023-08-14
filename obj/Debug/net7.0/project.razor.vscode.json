@@ -24075,6 +24075,11 @@
       "FilePath": "/Users/judeprashanth/Desktop/backend-dotnet/midterm-project/midterm-project/Views/PetStore/List.cshtml",
       "TargetPath": "Views\\PetStore\\List.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/judeprashanth/Desktop/backend-dotnet/midterm-project/midterm-project/Views/PetStore/Update.cshtml",
+      "TargetPath": "Views\\PetStore\\Update.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }

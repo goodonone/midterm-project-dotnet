@@ -12,12 +12,10 @@
         Has the Animal Been Spayed/Neutered?: @Model?.Spayed<br>
         Shots & Vaccinations Adinistered: @Model?.ShotsAndVaccinations</p>
 
-    @* @await Html.PartialAsync("_JobInput", Model) *@
-
     <input type="hidden" asp-for="PetId" />
     <div class="submit-wrapper">
         <input type="submit" class="btn btn-primary float-end" value="Save">
-        <a class="btn btn-light" asp-controller="Home" asp-action="Index">Back</a>
+        <a class="btn btn-light" asp-controller="PetStore" asp-action="List">Back</a>
     </div>
 
 </div>
