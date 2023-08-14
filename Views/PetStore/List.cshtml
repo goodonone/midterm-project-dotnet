@@ -2,7 +2,7 @@
 
 <div class="list-title">
     <h1 class="display-4 list-title">Welcome To Our Pet Store!</h1>
-        <a class="btn btn-primary mt-3 float-end" asp-controller="PetStore" asp-action="Create">Create New Pet</a>
+        <a class="btn btn-success mt-3 float-end" asp-controller="PetStore" asp-action="Create">Create New Pet</a>
 </div>
 
 <div class="list-container">
@@ -18,11 +18,11 @@
                         asp-route-id="@pet.PetId">
                         Details
                     </a>
-                    <a class="btn btn-sm btn-secondary mb-3 ml-3 float-end" asp-controller="PetStore" asp-action="Delete"
+                    <a class="btn btn-sm btn-danger mb-3 ml-3 float-end" asp-controller="PetStore" asp-action="Delete"
                         asp-route-id="@pet.PetId">
                         Delete Pet
                     </a>
-                    <a class="btn btn-sm btn-light mb-3 float-end" asp-controller="PetStore" asp-action="Update"
+                    <a class="btn btn-sm btn-warning mb-3 float-end" asp-controller="PetStore" asp-action="Update"
                         asp-route-id="@pet.PetId">
                         Edit Pet
                     </a>
