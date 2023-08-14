@@ -4,9 +4,12 @@
     ViewData["Title"] = "Update Pet";
 }
 
-<div class="resume-wrapper">
+<div class="updateTitle"> 
+<h1 class="display-4 mb-5 updateTitle">Edit Pet</h1>
+</div>
+
+<div class="container-fluid update-wrapper update">
     <form asp-controller="PetStore" asp-action="Update" method="post">
-        <h1 class="display-4 mb-5">Edit Pet</h1>
 
         <div class="form-group">
             <div class="row mb-4">
@@ -34,8 +37,16 @@
             </div>
 
             <div class="row mb-4">
+                <label class="control-label col-md-4" asp-for="PetAge"></label>
+                <textarea class="form-control col-md-8" asp-for="PetAge"></textarea>
+                <div class="col-10 offset-md-1 text-danger text-right">
+                    <span asp-validation-for="PetAge"></span>
+                </div>
+            </div>
+
+            <div class="row mb-4">
                 <label class="control-label col-md-4" asp-for="Spayed"></label>
-               <select class="form-control custom-select-md mb-3" asp-for="Spayed">
+                <select class="form-control custom-select-md mb-3" asp-for="Spayed">
                     <option selected>Choose...</option>
                     <option value="True">Yes</option>
                     <option value="False">No</option>
@@ -54,11 +65,12 @@
             </div>
         </div>
 
-        <input type="hidden" asp-for="PetId"/>
+        <input type="hidden" asp-for="PetId" />
         <div class="submit-wrapper">
             <input type="submit" class="btn btn-primary float-end" value="Save">
             <a class="btn btn-light" asp-controller="PetStore" asp-action="List">Back</a>
-            <a class="btn btn-light" asp-controller="PetStore" asp-action="Delete" asp-route-id="@Model?.PetId">Delete Pet</a>
+            <a class="btn btn-danger" asp-controller="PetStore" asp-action="Delete" asp-route-id="@Model?.PetId">Delete
+                Pet</a>
         </div>
     </form>
 </div>

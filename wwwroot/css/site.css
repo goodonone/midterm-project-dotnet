@@ -62,7 +62,7 @@ footer {
   margin-top: -200px;
 }
 
-.detailTitle{
+.detailTitle {
   margin-bottom: -30px;
 }
 
@@ -70,14 +70,22 @@ footer {
   display: inline;
 }
 
-.details{
-  display:flex;
+.details {
+  display: flex;
   flex-wrap: wrap;
-  justify-content:center;
+  justify-content: space-between;
 }
 
-.detailImage{
+.detailImage {
   width: 300px;
   height: 460px;
 }
 
+.update {
+  width: 1000px;
+  /* height: 800vh; */
+}
+
+.updateTitle {
+  margin-bottom: -25px;
+}
