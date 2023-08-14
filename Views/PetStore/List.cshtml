@@ -3,13 +3,13 @@
 <div class="list-wrapper">
     <h1 class="display-4 list-title">Welcome To Our Pet Store!</h1>
 
-<div class="container-fluid">
+<div class="container-fluid list-container">
     <div class="row list">
     @foreach (var pet in Model ?? new List<Pet>())
     {
                 <div class="col-4 list-contents">
-                    <p>@pet.PetSpecies</p>
-                    <img src="@pet.PhotoUrl" class="img-thumbnail rounded">
+                    <h4>@pet.PetSpecies</h4>
+                    <img src="@pet.PhotoUrl" class="img-thumbnail rounded list-image">
 
                     <a class="btn btn-sm btn-secondary mb-3 ml-3 float-end" asp-controller="PetStore" asp-action="Detail"
                         asp-route-id="@pet.PetId">
@@ -24,7 +24,6 @@
                         Edit Pet
                     </a>
                 </div>
-
     }
     </div>
 </div>
