@@ -4,20 +4,32 @@
     ViewData["Details"] = "Pet Details";
 }
 
-<div class="resume-wrapper">
+<div class="detailTitle">
     <h1 class="display-4 mb-5">@Model?.PetSpecies</h1>
-    <img src="@Model?.PhotoUrl">
-    <p>@Model?.PetDescription<br>
-        <b>Age:</b> @Model?.PetAge<br>
-        <b>Has the Animal Been Spayed/Neutered?:</b> @Model?.Spayed
-        <br>
-        <b>Shots & Vaccinations Administered:</b> @Model?.ShotsAndVaccinations
-    </p>
+</div>
 
-    <input type="hidden" asp-for="PetId" />
-    <div class="submit-wrapper">
-        <input type="submit" class="btn btn-primary float-end" value="Save">
-        <a class="btn btn-light" asp-controller="PetStore" asp-action="List">Back</a>
+<div class="container-fluid detailContainer">
+    <div class="row details">
+        <div class="col">
+            <img src="@Model?.PhotoUrl" class="rounded detailImage">
+        </div>
+        <div class="col">
+            <p>@Model?.PetDescription<br>
+                <b>Age:</b> @Model?.PetAge<br>
+                <b>Has the Animal Been Spayed/Neutered?:</b> @Model?.Spayed
+                <br>
+                <b>Shots & Vaccinations Administered:</b> @Model?.ShotsAndVaccinations
+            </p>
+        </div>
+
     </div>
+
+</div>
+
+
+<input type="hidden" asp-for="PetId" />
+<div class="submit-wrapper">
+    <a class="btn btn-light" asp-controller="PetStore" asp-action="List">Back</a>
+</div>
 
 </div>
