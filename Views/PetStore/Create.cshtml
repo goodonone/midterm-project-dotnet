@@ -4,9 +4,12 @@
     ViewData["Title"] = "Create Pet";
 }
 
-<div class="create-wrapper">
+<div class="createTitle">
+    <h1 class="display-4 text-center mb-5 createTitle">Add New Pet</h1>
+</div>
+
+<div class="container-fluid create-wrapper create">
     <form asp-controller="PetStore" asp-action="Create" method="post">
-        <h1 class="display-4 text-center mb-5">Add New Pet</h1>
 
         <div class="form-group">
             <div class="row mb-4">
@@ -61,10 +64,10 @@
                 </div>
             </div>
         </div>
-        @* @await Html.PartialAsync("_JobInput", Model) *@
 
-        <input type="submit" class="btn btn-sm btn-primary float-end" value="Save">
+
+        <input type="submit" class="btn btn-sm btn-success float-end" asp-route-id="@Model?.PetId" value="Save">
     </form>
 
-    <a class="btn btn-sm btn-light" asp-controller="Home" asp-action="Index">Back</a>
+    <a class="btn btn-sm btn-light" asp-controller="PetStore" asp-action="List">Back</a>
 </div>

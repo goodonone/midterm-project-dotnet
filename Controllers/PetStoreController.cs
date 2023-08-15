@@ -68,7 +68,7 @@ public class PetStoreController : Controller
         }
 
         _petRepository.CreatePet(pet);
-        return RedirectToAction("List");
+        return RedirectToAction("Detail", new { id = pet.PetId });;
     }
 
 

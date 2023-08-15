@@ -82,10 +82,19 @@ footer {
 }
 
 .update {
-  width: 1000px;
-  /* height: 800vh; */
+  width: 800px;
+  height: 50vh;
 }
 
 .updateTitle {
+  margin-bottom: -25px;
+}
+
+.create {
+  width: 800px;
+  height: 50vh;
+}
+
+.createTitle {
   margin-bottom: -25px;
 }
