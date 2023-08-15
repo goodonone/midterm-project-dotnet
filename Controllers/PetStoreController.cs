@@ -49,7 +49,7 @@ public class PetStoreController : Controller
         }
 
         _petRepository.UpdatePet(pet);
-        return RedirectToAction("List");
+        return RedirectToAction("Detail", new { id = pet.PetId });;
     }
 
     [HttpGet]
