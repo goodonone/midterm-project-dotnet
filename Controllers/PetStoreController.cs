@@ -22,6 +22,10 @@ public class PetStoreController : Controller
     public IActionResult Detail(int id)
     {
         var pet = _petRepository.GetPetById(id);
+        string? stateOne = "Yes";
+        ViewData["True"] = stateOne;
+        string? stateTwo = "No";
+        ViewData["False"] = stateTwo;
         if (pet == null)
         {
             return View();
@@ -68,7 +72,7 @@ public class PetStoreController : Controller
         }
 
         _petRepository.CreatePet(pet);
-        return RedirectToAction("Detail", new { id = pet.PetId });;
+        return RedirectToAction("Detail", new { id = pet.PetId });
     }
 
 
